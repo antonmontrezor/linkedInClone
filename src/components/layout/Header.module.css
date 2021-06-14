@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    height: 52px;
+    outline: 1px solid black;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.nav-search {
+    display: flex;
+    width: 43%;
+    align-items: center;
+}
+
+.nav-search input {
+    height: 30px;
+}
+
+.icon i {
+    color: #0a66c2;
+    font-size: 4rem;
+    margin: 0 10px;
+}

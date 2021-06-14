@@ -1,0 +1,18 @@
+.nav-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 57%;
+}
+
+.nav-elements a {
+    color: #666666;
+    font-weight: 250;
+    text-decoration: none;
+}
+
+.nav-el-icon img {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+}
