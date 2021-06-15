@@ -11,9 +11,13 @@
     text-decoration: none;
 }
 
+.nav-el-icon {
+    border-right: 1px solid rgba(175, 175, 175, 0.3);
+}
+
 .nav-el-icon img {
-    height: 25px;
-    width: 25px;
+    height: 23.5px;
+    width: 23.5px;
     border-radius: 100%;
 }
 
@@ -23,4 +27,10 @@
     flex-shrink: 0;
     flex-basis: 95px;
     text-align: center;
+}
+
+.ad:focus,
+.ad:hover {
+    color: #8a6a3d;
+    text-decoration: underline;
 }

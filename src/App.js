@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 // components
-import Header from './components/layout/Header';
+import Header from './components/Layout/Header';
 
 //styles
 import './helpers/setup.css';
@@ -19,6 +19,7 @@ import {
     faCaretDown,
     faSearch,
 } from '@fortawesome/free-solid-svg-icons';
+import Profile from './components/User/Profile/Profile';
 library.add(
     fab,
     faHome,
@@ -32,7 +33,7 @@ library.add(
 );
 
 function App() {
-    return <Header></Header>;
+    return <Header />;
 }
 
 export default App;

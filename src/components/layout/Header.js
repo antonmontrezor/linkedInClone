@@ -1,6 +1,6 @@
 import classes from './Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import NavItems from '../UI/NavItems';
+import NavItems from './MainNavigation/NavItems';
 import Wrapper from '../UI/Wrapper';
 
 const Header = () => {
@@ -9,12 +9,15 @@ const Header = () => {
             <Wrapper>
                 <nav className={classes['main-nav']}>
                     <div className={classes['nav-search']}>
-                        <div className={classes.icon}>
+                        <a
+                            className={classes.icon}
+                            href='https://www.linkedin.com/feed/'
+                        >
                             <i aria-hidden='true'>
                                 <FontAwesomeIcon icon={['fab', 'linkedin']} />
                             </i>
                             <span className='sr-only'>LinkedIn logo</span>
-                        </div>
+                        </a>
                         <label htmlFor='search-bar' className='sr-only'>
                             Search bar
                         </label>
