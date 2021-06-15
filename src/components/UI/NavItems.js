@@ -11,6 +11,7 @@ const NavItems = () => {
                 url={'https://www.linkedin.com/feed/'}
                 iconName='home'
                 label='Home'
+                className={styles.target}
             />
             <NavItem
                 url={'https://www.linkedin.com/mynetwork/'}
@@ -40,11 +41,15 @@ const NavItems = () => {
                     <img src={avatar} alt='' />
                 </i>
                 <span className={styles.label}>
-                    Me <FontAwesomeIcon icon='caret-down' />
+                    Me{' '}
+                    <FontAwesomeIcon
+                        icon='caret-down'
+                        className={styles.caret}
+                    />
                 </span>
             </a>
             <NavItem iconName='th' label='Work' caret='caret-down' />
-            <a className={styles.label} href='#'>
+            <a className={`${styles.label} ${classes.ad}`} href='#'>
                 Retry Premium Free
             </a>
         </div>
@@ -52,55 +57,3 @@ const NavItems = () => {
 };
 
 export default NavItems;
-
-{
-    /* <div className='icon'>
-                <i aria-hidden='true'>
-                    <FontAwesomeIcon icon='home' />
-                </i>
-                <span>Home</span>
-            </div>
-            <div className='icon'>
-                <i aria-hidden='true'>
-                    <FontAwesomeIcon icon='user-friends' />
-                </i>
-                <span>My Network</span>
-            </div>
-            <div className='icon'>
-                <i aria-hidden='true'>
-                    <FontAwesomeIcon icon='suitcase' />
-                </i>
-                <span>Jobs</span>
-            </div>
-            <div className='icon'>
-                <i aria-hidden='true'>
-                    <FontAwesomeIcon icon='comment-dots' />
-                </i>
-                <span>Messaging</span>
-            </div>
-            <div className='icon'>
-                <i aria-hidden='true'>
-                    <FontAwesomeIcon icon='bell' />
-                </i>
-                <span>Notifications</span>
-            </div>
-            <div className='icon'>
-                <i aria-hidden='true'>
-                    <FontAwesomeIcon icon='th' />
-                </i>
-                <span>Work</span>
-            </div>
-            <div className='icon'>
-                <i aria-hidden='true'>
-                    <img src={avatar} alt='' />
-                </i>
-                <span>Work</span>
-            </div>
-            <div className='icon'>
-                <i aria-hidden='true'>
-                    <FontAwesomeIcon icon='th' />
-                </i>
-                <span>Work</span>
-            </div>
-            ; */
-}

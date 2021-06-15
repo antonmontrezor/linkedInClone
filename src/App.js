@@ -17,6 +17,7 @@ import {
     faBell,
     faTh,
     faCaretDown,
+    faSearch,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
     fab,
@@ -26,7 +27,8 @@ library.add(
     faCommentDots,
     faBell,
     faTh,
-    faCaretDown
+    faCaretDown,
+    faSearch
 );
 
 function App() {

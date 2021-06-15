@@ -15,8 +15,19 @@ const Header = () => {
                             </i>
                             <span className='sr-only'>LinkedIn logo</span>
                         </div>
-                        <label htmlFor='search-bar'></label>
-                        <input type='search' id='search-bar' name='search' />
+                        <label htmlFor='search-bar' className='sr-only'>
+                            Search bar
+                        </label>
+                        <FontAwesomeIcon
+                            icon='search'
+                            className={classes['search-icon']}
+                        />
+                        <input
+                            type='search'
+                            id='search-bar'
+                            name='search'
+                            placeholder='Search'
+                        />
                     </div>
                     <NavItems />
                 </nav>
