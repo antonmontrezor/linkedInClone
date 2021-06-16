@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ReactDOM from 'react-dom';
 import classes from './NavItems.module.css';
 import styles from './NavItem.module.css';
 import NavItem from './NavItem';
@@ -9,8 +10,9 @@ import Profile from '../../User/Profile/Profile';
 const NavItems = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const openDropDownHandler = () => {
-        setIsMenuOpen(true);
+    const menuStateHandler = () => {
+        if (isMenuOpen) setIsMenuOpen(false);
+        else setIsMenuOpen(true);
     };
 
     return (
@@ -44,7 +46,7 @@ const NavItems = () => {
             <a
                 className={`${classes['nav-el-icon']} ${styles['nav-element']}`}
                 href='#'
-                onClick={openDropDownHandler}
+                onClick={menuStateHandler}
             >
                 <i aria-hidden='true'>
                     <img src={avatar} alt='' />
@@ -57,7 +59,11 @@ const NavItems = () => {
                     />
                 </span>
             </a>
-            {isMenuOpen && <Profile onClose={setIsMenuOpen} />}
+            {isMenuOpen &&
+                ReactDOM.createPortal(
+                    <Profile onClose={menuStateHandler} />,
+                    document.getElementById('main-nav')
+                )}
             <NavItem iconName='th' label='Work' caret='caret-down' />
             <a className={`${styles.label} ${classes.ad}`} href='#'>
                 Retry Premium Free

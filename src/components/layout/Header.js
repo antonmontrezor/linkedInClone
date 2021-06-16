@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header className={classes.header}>
             <Wrapper>
-                <nav className={classes['main-nav']}>
+                <nav className={classes['main-nav']} id='main-nav'>
                     <div className={classes['nav-search']}>
                         <a
                             className={classes.icon}

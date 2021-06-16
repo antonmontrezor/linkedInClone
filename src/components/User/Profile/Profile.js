@@ -24,7 +24,15 @@ const Profile = props => {
                 Manage
                 <li>Posts & Activity</li>
                 <li>Job Posting Account</li>
-                <li className={classes['sign-out']}>Sign Out</li>
+                <li>
+                    <a
+                        onClick={props.onClose}
+                        className={classes['sign-out']}
+                        href='#'
+                    >
+                        Sign Out
+                    </a>
+                </li>
             </ul>
         </section>
     );
